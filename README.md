@@ -1,4 +1,4 @@
-# js-cnw8ju
+# Esercizio di preparazione al progetto (Passo 3)
 
 Create un array di alcune posizioni (indicativamente 4) ed associate il contenuto di ciascun elemento ad un tasto, in modo che premendo il tasto compaia il valore associato nella matrice.
 
