@@ -1,19 +1,25 @@
-// Import stylesheets
-import './style.css';
-const postiEl = document.getElementById('posti');
+const plateaEl = document.getElementById('platea');
 const nomeEl = document.getElementById('nome');
 
-const posti = new Array(10);
-posti[2]="Alessio";
-posti[5]="Gianna";
-for (var i = 0; i < posti.length; i++) {
-  var btn = document.createElement('button');
-  btn.indice = i;
-  btn.innerHTML = "P"+ ( i + 1 );
-  btn.addEventListener('click', mostraNome);
-  postiEl.appendChild(btn);
+const platea = [];
+for (var j = 0; j < 4; j++) {
+  platea.push(new Array(10));
+}
+
+platea[2][1] = 'Alessio';
+platea[3][4] = 'Gianna';
+for (var j = 0; j < platea.length; j++) {
+  for (var i = 0; i < platea[j].length; i++) {
+    var btn = document.createElement('button');
+    btn.nfila = j;
+    btn.nposto = i;
+    btn.innerHTML = 'P' +  (j + 1) + (i + 1);
+    btn.addEventListener('click', mostraNome);
+    plateaEl.appendChild(btn);
+  }
+  plateaEl.appendChild(document.createElement('br'));
 }
 
 function mostraNome() {
-  nomeEl.innerHTML = posti[this.indice];
+  nomeEl.innerHTML = platea[this.nfila][this.nposto];
 }

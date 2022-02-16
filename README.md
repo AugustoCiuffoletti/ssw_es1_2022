@@ -1,9 +1,7 @@
-# Esercizio di preparazione al progetto (Passo 3)
+# Esercizio di preparazione al progetto (Passo 4)
 
-Create un array di alcune posizioni (indicativamente 4) ed associate il contenuto di ciascun elemento ad un tasto, in modo che premendo il tasto compaia il valore associato nella matrice.
+Costruiamo un array di array, con le stesse proprietà dette prima. Il questo modo avremo la "platea" del nostro teatro.
 
-Per creare l'array senza necessariamente riempirlo potete utilizzare "new Array(4)" che crea una array di valori indefiniti di quattro posizioni. Poi potrete inizializzarne alcune per verificare il funzionamento del programma.
+Per creare l'array bidimensionale inizializziamo un array vuoto e aggiungiamo a questo una serie di array come elementi, a rappresentare le file della platea.
 
-Per ottenere il risultato registrate in un attributo (ad es. "indice") di ciascun tasto il valore dell'indice utilizzato per iterare la creazione dei tasti.
-
-Nel callback associato al tasto potrete recuperare questo valore. Infatti la variabile "this" nel callback corrisponde all'elemento su cui si è verificato l'evento (il click), e quindi potete risalire al valore del suo attributo "indice"
+I bottoni sono sistemati per file consecutive, separando ciascuna con un elemento "br" (document.createElement('br')). In ciascun bottone dovremo registrare due indici, uno per il numero della fila, uno per il posto nella fila. 
