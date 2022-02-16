@@ -1,3 +1,3 @@
-# js-cnw8ju
+# Esercizio di preparazione al progetto (Passo 0)
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-cnw8ju)
+Scrivere un programma JavaScript che posiziona su una pagina HTML vuota un singolo tasto, senza funzione collegata. Il tasto deve recare una etichetta, nell'esempio "P".
