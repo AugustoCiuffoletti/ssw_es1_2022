@@ -1,4 +1,4 @@
-# Esercizio di preparazione al progetto (Passo 0)
+# Esercizio di preparazione al progetto (Passo 1)
 
 Ora create un paragrafo nell'HTML e collocate il tasto al suo interno (non nel body).
 
