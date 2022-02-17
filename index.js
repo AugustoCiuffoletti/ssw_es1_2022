@@ -19,8 +19,13 @@ class ordine {
         btn.addEventListener(
           'click', 
           function() { 
-            if ()
-            nomeEl.innerHTML = self.posti[this.nfila][this.nposto]
+            if ( prenotaEl.value !== "" ) {
+              self.posti[this.nfila][this.nposto] = prenotaEl.value;
+              this.style.color = "red";
+              prenotaEl.value="";
+            }
+            else
+              nomeEl.innerHTML = self.posti[this.nfila][this.nposto]
           }
         );
         this.element.appendChild(btn);

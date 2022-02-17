@@ -1,11 +1,3 @@
-# Esercizio di preparazione al progetto (Passo 5)
+# Esercizio di preparazione al progetto (Passo 7)
 
-Eliminiamo il problema della ripetizione delle strutture: creaiamo una classe "ordine" che ci serve a definire un generico ordine di posti.
-Si tratta di ricopiare il codice all'interno del costruttore della classe. 
-
-Il costruttore prende come parametri:
-- il numero di file
-- il numero di posti in una fila
-- il nome dell'elemento HTML che ospita i bottoni
-
-Poi si creano due oggetti della classe, uno per la platea e uno per i palchi.
+Ora introduciamo un input box per inserire un nominativo da inserire nel nostro teatro. Inserito il nominativo si fa click su un posto e il nominativo viene registrato nell'array. Insieme, il colore del tasto diventa rosso per segnalare che il posto è occupato, e il contenuto dell'input box viene cancellato. 
