@@ -1,5 +1,3 @@
-const plateaEl = document.getElementById('platea');
-const palchiEl = document.getElementById('palchi');
 const nomeEl = document.getElementById('nome');
 
 class ordine {
