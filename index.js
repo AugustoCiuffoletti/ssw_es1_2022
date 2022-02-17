@@ -1,5 +1,4 @@
-const plateaEl = document.getElementById('platea');
-const palchiEl = document.getElementById('palchi');
+const prenotaEl = document.getElementById('prenota');
 const nomeEl = document.getElementById('nome');
 
 class ordine {
@@ -20,6 +19,7 @@ class ordine {
         btn.addEventListener(
           'click', 
           function() { 
+            if ()
             nomeEl.innerHTML = self.posti[this.nfila][this.nposto]
           }
         );
