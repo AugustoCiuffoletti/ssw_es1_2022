@@ -5,6 +5,16 @@ class ordine {
   posti = [];
   element;
   constructor(nposti, nfile, elementName) {
+    var self=this;
+    function mostraNome () { 
+      if ( prenotaEl.value !== "" ) {
+        self.posti[this.nfila][this.nposto] = prenotaEl.value;
+        this.style.color = "red";
+       prenotaEl.value="";
+      }
+      else
+        nomeEl.innerHTML = self.posti[this.nfila][this.nposto]
+    };
     this.element = document.getElementById(elementName);
     for (var j = 0; j < nfile; j++) {
       this.posti.push(new Array(nposti));
@@ -16,18 +26,7 @@ class ordine {
         btn.nposto = i;
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
         let self = this;
-        btn.addEventListener(
-          'click', 
-          function() { 
-            if ( prenotaEl.value !== "" ) {
-              self.posti[this.nfila][this.nposto] = prenotaEl.value;
-              this.style.color = "red";
-              prenotaEl.value="";
-            }
-            else
-              nomeEl.innerHTML = self.posti[this.nfila][this.nposto]
-          }
-        );
+        btn.addEventListener('click', mostraNome);
         this.element.appendChild(btn);
       }
       this.element.appendChild(document.createElement('br'));
