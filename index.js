@@ -4,6 +4,10 @@ class ordine {
   posti = [];
   element;
   constructor(nposti, nfile, elementName) {
+    let self=this;
+    function mostra () { 
+      nomeEl.innerHTML = self.posti[this.nfila][this.nposto]
+    };
     this.element = document.getElementById(elementName);
     for (var j = 0; j < nfile; j++) {
       this.posti.push(new Array(nposti));
@@ -14,13 +18,7 @@ class ordine {
         btn.nfila = j;
         btn.nposto = i;
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
-        let self = this;
-        btn.addEventListener(
-          'click', 
-          function() { 
-            nomeEl.innerHTML = self.posti[this.nfila][this.nposto]
-          }
-        );
+        btn.addEventListener('click', mostra);
         this.element.appendChild(btn);
       }
       this.element.appendChild(document.createElement('br'));
