@@ -4,8 +4,8 @@ class ordine {
   posti = [];
   element;
   constructor(nposti, nfile, elementName) {
-    let self=this;
-    function mostra () { 
+    var self=this; // Mi serve per continuare a fare riferimento a "this" quando viene riscritto (cioè in "mostraNome")
+    function mostraNome () { 
       nomeEl.innerHTML = self.posti[this.nfila][this.nposto]
     };
     this.element = document.getElementById(elementName);
@@ -18,7 +18,7 @@ class ordine {
         btn.nfila = j;
         btn.nposto = i;
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
-        btn.addEventListener('click', mostra);
+        btn.addEventListener('click', mostraNome);
         this.element.appendChild(btn);
       }
       this.element.appendChild(document.createElement('br'));
