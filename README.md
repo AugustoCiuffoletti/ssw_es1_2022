@@ -1,7 +1,5 @@
-# Esercizio di preparazione al progetto (Passo 4)
+# Esercizio di preparazione al progetto (Passo 5)
 
-Costruiamo un array di array, con le stesse proprietà dette prima. Il questo modo avremo la "platea" del nostro teatro.
+Terminiamo la costruzione del teatro aggiungendo anche tre palchi, rappresentati di nuovo come un array. Ciascun palco è rappresentato come un array di sei posizioni. La sua gestione è del tutto analoga a quella della platea.
 
-Per creare l'array bidimensionale inizializziamo un array vuoto e aggiungiamo a questo una serie di array come elementi, a rappresentare le file della platea.
-
-I bottoni sono sistemati per file consecutive, separando ciascuna con un elemento "br" (document.createElement('br')). In ciascun bottone dovremo registrare due indici, uno per il numero della fila, uno per il posto nella fila. 
+Dovrà essere aggiunto un nuovo paragrafo nel file HTML, una variabile che lo rappresenti nello script, 
