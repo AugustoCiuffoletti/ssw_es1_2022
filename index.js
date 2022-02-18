@@ -2,12 +2,11 @@ const nomeEl = document.getElementById('nome');
 
 class ordine {
   posti = [];
-  element;
   constructor(nposti, nfile, elementName) {
     function mostraNome () { 
       nomeEl.innerHTML = this.value;
     };
-    this.element = document.getElementById(elementName);
+    var element = document.getElementById(elementName);
     for (var j = 0; j < nfile; j++) {
       this.posti.push(new Array(nposti));
     }
@@ -16,10 +15,10 @@ class ordine {
         var btn = document.createElement('button');
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
         btn.addEventListener('click', mostraNome);
-        this.element.appendChild(btn);
+        element.appendChild(btn);
         this.posti[j][i]=btn;
       }
-      this.element.appendChild(document.createElement('br'));
+      element.appendChild(document.createElement('br'));
     }
   }
 }
