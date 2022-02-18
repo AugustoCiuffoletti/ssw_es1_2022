@@ -22,7 +22,6 @@ class ordine {
       for (var i = 0; i < this.posti[j].length; i++) {
         var btn = document.createElement('button');
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
-        let self = this;
         btn.addEventListener('click', mostraNome);
         this.element.appendChild(btn);
       }
