@@ -5,15 +5,14 @@ class ordine {
   posti = [];
   element;
   constructor(nposti, nfile, elementName) {
-    var self=this;
     function mostraNome () { 
       if ( prenotaEl.value !== "" ) {
-        self.posti[this.nfila][this.nposto] = prenotaEl.value;
+        this.value = prenotaEl.value;
         this.style.color = "red";
-       prenotaEl.value="";
+        prenotaEl.value="";
       }
       else
-        nomeEl.innerHTML = self.posti[this.nfila][this.nposto]
+        nomeEl.innerHTML = this.value 
     };
     this.element = document.getElementById(elementName);
     for (var j = 0; j < nfile; j++) {
@@ -22,8 +21,6 @@ class ordine {
     for (var j = 0; j < this.posti.length; j++) {
       for (var i = 0; i < this.posti[j].length; i++) {
         var btn = document.createElement('button');
-        btn.nfila = j;
-        btn.nposto = i;
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
         let self = this;
         btn.addEventListener('click', mostraNome);
