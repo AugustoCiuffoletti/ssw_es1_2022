@@ -10,6 +10,7 @@ for (var i = 0; i < posti.length; i++) {
   btn.value="";
   btn.addEventListener('click', mostraNome);
   postiEl.appendChild(btn);
+  posti[i]=btn;
 }
 posti[2].value="Alessio";
 posti[5].value="Gianna";
