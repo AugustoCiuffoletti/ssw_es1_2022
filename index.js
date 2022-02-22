@@ -7,11 +7,11 @@ const platea = [];
 const palchi = [];
 
 for (var j = 0; j < 9; j++) {
-  platea.push(new Array(8));
+  platea.push(new Array(8).fill("x"));
 }
 
 for (var j = 0; j < 6; j++) {
-  palchi.push(new Array(6));
+  palchi.push(new Array(6).fill("x"));
 }
 
 for (var j = 0; j < platea.length; j++) {
