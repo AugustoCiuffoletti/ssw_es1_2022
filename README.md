@@ -1,9 +1,7 @@
 # Esercizio di preparazione al progetto (Passo 3)
 
-Create un array di alcune posizioni ed associate il contenuto di ciascun elemento ad un tasto, in modo che premendo il tasto compaia il valore associato nella matrice.
+Ora i valori nell'array di bottoni vengono caricati da un altro array di stringhe. Abbiamo quindi due array, uno di stringhe (posto), ed uno di bottoni (prenotazione) con la stessa dimensione.
 
-Per creare l'array senza necessariamente riempirlo potete utilizzare "new Array(4)" che crea una array di valori indefiniti di quattro posizioni. Poi potrete inizializzarne alcune per verificare il funzionamento del programma.
+Per inizializzare l'array di stringhe utilizziamo una fill()
 
-Per ottenere il risultato registrate in un attributo (ad es. "indice") di ciascun tasto il valore dell'indice utilizzato per iterare la creazione dei tasti.
-
-Nel callback associato al tasto potrete recuperare questo valore. Infatti la variabile "this" nel callback corrisponde all'elemento su cui si è verificato l'evento (il click), e quindi potete risalire al valore del suo attributo "indice"
+Per caricare l'array di stringhe nell'array di bottoni utilizziamo una map(). la funzione definita nella map prende come parametri l'elemento iterato e il suo indice, per impostare il valore del bottone nella stessa posizione.
