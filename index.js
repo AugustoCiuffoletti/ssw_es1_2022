@@ -16,6 +16,7 @@ var prenotazione = platea.map( (fila,i) => {
     btn = document.createElement('button');
     plateaEl.appendChild(btn);
     btn.value=nome;
+    btn.style.color = (nome !== "x") ? 'red' : 'green';
     btn.innerHTML = 'P' +  (j + 1) + (i + 1);
     btn.addEventListener('click', mostraNome);
     return btn;
