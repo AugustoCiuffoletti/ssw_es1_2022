@@ -1,6 +1,6 @@
 # Esercizio di preparazione al progetto (Passo 3)
 
-Create un array di alcune posizioni (indicativamente 4) ed associate il contenuto di ciascun elemento ad un tasto, in modo che premendo il tasto compaia il valore associato nella matrice.
+Create un array di alcune posizioni ed associate il contenuto di ciascun elemento ad un tasto, in modo che premendo il tasto compaia il valore associato nella matrice.
 
 Per creare l'array senza necessariamente riempirlo potete utilizzare "new Array(4)" che crea una array di valori indefiniti di quattro posizioni. Poi potrete inizializzarne alcune per verificare il funzionamento del programma.
 

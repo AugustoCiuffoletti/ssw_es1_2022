@@ -3,17 +3,18 @@ import './style.css';
 const postiEl = document.getElementById('posti');
 const nomeEl = document.getElementById('nome');
 
-const posti = new Array(10);
-for (var i = 0; i < posti.length; i++) {
-  var btn = document.createElement('button');
-  btn.innerHTML = "P"+ ( i + 1 );
-  btn.value="";
-  btn.addEventListener('click', mostraNome);
-  postiEl.appendChild(btn);
-  posti[i]=btn;
-}
-posti[2].value="Alessio";
-posti[5].value="Gianna";
+const posto = new Array(10).fill("x");
+posto[2]="Alessio";
+posto[5]="Gianna";
+
+const prenotazione = new Array(10);
+posto.map( (nome, i) => { 
+  prenotazione[i]=document.createElement('button');
+  postiEl.appendChild(prenotazione[i]);
+  prenotazione[i].innerHTML = "P"+ ( i + 1 );
+  prenotazione[i].value=nome;
+  prenotazione[i].addEventListener('click', mostraNome);
+})
 
 function mostraNome() {
   nomeEl.innerHTML = this.value;
