@@ -9,11 +9,12 @@ posto[5]="Gianna";
 
 const prenotazione = new Array(10);
 posto.map( (nome, i) => { 
-  prenotazione[i]=document.createElement('button');
-  postiEl.appendChild(prenotazione[i]);
-  prenotazione[i].innerHTML = "P"+ ( i + 1 );
-  prenotazione[i].value=nome;
-  prenotazione[i].addEventListener('click', mostraNome);
+  var btn=document.createElement('button');
+  postiEl.appendChild(btn);
+  btn.innerHTML = "P"+ ( i + 1 );
+  btn.value=nome;
+  btn.addEventListener('click', mostraNome);
+  return (btn)
 })
 
 function mostraNome() {
