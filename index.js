@@ -11,11 +11,7 @@ for ( var i = 0; i < nfile; i++ ) {
 platea[2][1] = 'Alessio';
 platea[3][4] = 'Gianna';
 
-console.log(JSON.stringify(platea));
-
-var prenotazione = new Array(nfile).fill(Array(nposti));
-
-prenotazione=platea.map( (fila,i) => {
+var prenotazione = platea.map( (fila,i) => {
   p=fila.map( (nome,j) => {
     btn = document.createElement('button');
     plateaEl.appendChild(btn);
