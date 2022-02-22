@@ -1,24 +1,34 @@
 const nomeEl = document.getElementById('nome');
 
+for (var j = 0; j < nfilePlatea; j++) {
+  teatro.platea.push(new Array(npostiPlatea).fill("x"));
+}
+platea[2][1] = 'Alessio';
+platea[3][4] = 'Gianna';
+
 class ordine {
-  posti = [];
-  constructor(nposti, nfile, elementName) {
+  prenotazione = [];
+  constructor(posti, nposti, nfile, elementName) {
     function mostraNome () { 
       nomeEl.innerHTML = this.value;
     };
     var element = document.getElementById(elementName);
-    for (var j = 0; j < nfile; j++) {
-      this.posti.push(new Array(nposti));
-    }
-    for (var j = 0; j < this.posti.length; j++) {
-      for (var i = 0; i < this.posti[j].length; i++) {
-        var btn = document.createElement('button');
-        btn.innerHTML = 'P' + (j + 1) + (i + 1);
+
+    prenotazione = posti.map( (fila,i) => {
+      p=fila.map( (nome,j) => {
+        btn = document.createElement('button');
+        plateaEl.appendChild(btn);
+        btn.value=nome;
+        btn.innerHTML = 'P' +  (j + 1) + (i + 1);
         btn.addEventListener('click', mostraNome);
-        element.appendChild(btn);
-        this.posti[j][i]=btn;
-      }
-      element.appendChild(document.createElement('br'));
+        return btn;
+      })
+      plateaEl.appendChild(document.createElement('br'));
+      return p;
+    })
+    
+    function mostraNome() {
+      nomeEl.innerHTML = this.value;
     }
   }
 }
