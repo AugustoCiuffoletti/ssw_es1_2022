@@ -1,7 +1,6 @@
 class ordinePrenotazione {
   prenotazione = [];
   constructor(posti, elementName) {
-    
     var element = document.getElementById(elementName);
     this.prenotazione = posti.map((fila, i) => {
       var p = fila.map((nome, j) => {
