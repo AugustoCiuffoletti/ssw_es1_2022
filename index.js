@@ -5,17 +5,17 @@ class ordine {
       nomeEl.innerHTML = this.value;
     }
     var element = document.getElementById(elementName);
-
-    prenotazione = posti.map((fila, i) => {
-      p = fila.map((nome, j) => {
-        btn = document.createElement('button');
-        plateaEl.appendChild(btn);
+    this.prenotazione = posti.map((fila, i) => {
+      var p = fila.map((nome, j) => {
+        var btn = document.createElement('button');
+        element.appendChild(btn);
         btn.value = nome;
+        btn.color = (nome !== "x") ? 'red' : 'green';
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
         btn.addEventListener('click', mostraNome);
         return btn;
       });
-      plateaEl.appendChild(document.createElement('br'));
+      element.appendChild(document.createElement('br'));
       return p;
     });
 
@@ -26,14 +26,13 @@ class ordine {
 }
 
 const nomeEl = document.getElementById('nome');
-
 const nfilePlatea = 7;
 const npostiPlatea = 10;
 const nfilePalchi = 4;
 const npostiPalchi = 6;
 const teatro = {
   platea: [],
-  palchi: [],
+  palchi: []
 };
 for (var i = 0; i < nfilePlatea; i++) {
   teatro.platea.push(new Array(npostiPlatea).fill('x'));
@@ -41,11 +40,9 @@ for (var i = 0; i < nfilePlatea; i++) {
 for (var i = 0; i < nfilePalchi; i++) {
   teatro.palchi.push(new Array(npostiPalchi).fill('x'));
 }
-var plateaPrenotazione;
-var palchiPrenotazione;
+teatro.platea[2][1] = 'Alessio';
+teatro.platea[3][4] = 'Gianna';
+teatro.palchi[3][1] = 'Luigi';
 
-platea[2][1] = 'Alessio';
-platea[3][4] = 'Gianna';
-palchi[4][1] = 'Luigi';
-plateaPrenotazione = new ordine(4, 6, 'platea');
-palchiPrenotazione = new ordine(8, 8, 'palchi');
+var plateaPrenotazione = new ordine(teatro.platea, 'platea');
+var palchiPrenotazione = new ordine(teatro.palchi, 'palchi');
