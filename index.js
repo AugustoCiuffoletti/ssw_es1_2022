@@ -1,24 +1,25 @@
 const plateaEl = document.getElementById('platea');
 const nomeEl = document.getElementById('nome');
 
-const platea = [];
-for (var j = 0; j < 4; j++) {
-  platea.push(new Array(10));
-}
+const nfile = 5;
+const nposti = 10;
 
-for (var j = 0; j < platea.length; j++) {
-  for (var i = 0; i < platea[j].length; i++) {
-    var btn = document.createElement('button');
+const platea = Array(nfile).fill(Array(nposti).fill("x"));
+platea[2][1] = 'Alessio';
+platea[3][4] = 'Gianna';
+
+var prenotazione = new Array(nfile).fill(Array(nposti));
+
+prenotazione=platea.map( (fila,i) => {
+  prenotazione[i]=fila.map( (nomi,j) => {
+    btn = document.createElement('button');
+    plateaEl.appendChild(btn);
+    btn.value=nomi[j];
     btn.innerHTML = 'P' +  (j + 1) + (i + 1);
     btn.addEventListener('click', mostraNome);
-    plateaEl.appendChild(btn);
-    platea[j][i]=btn;
-  }
-  plateaEl.appendChild(document.createElement('br'));
-}
-platea[2][1].value = 'Alessio';
-platea[3][4].value = 'Gianna';
-
+  })
+  
+})
 
 function mostraNome() {
   nomeEl.innerHTML = this.value;
