@@ -1,4 +1,4 @@
-class ordine {
+class ordinePrenotazione {
   prenotazione = [];
   constructor(posti, elementName) {
     function mostraNome() {
@@ -26,23 +26,27 @@ class ordine {
 }
 
 const nomeEl = document.getElementById('nome');
-const nfilePlatea = 7;
-const npostiPlatea = 10;
-const nfilePalchi = 4;
-const npostiPalchi = 6;
+
 const teatro = {
   platea: [],
   palchi: []
 };
+
+const nfilePlatea = 7;
+const npostiPlatea = 10;
 for (var i = 0; i < nfilePlatea; i++) {
   teatro.platea.push(new Array(npostiPlatea).fill('x'));
 }
+
+const nfilePalchi = 4;
+const npostiPalchi = 6;
 for (var i = 0; i < nfilePalchi; i++) {
   teatro.palchi.push(new Array(npostiPalchi).fill('x'));
 }
+
 teatro.platea[2][1] = 'Alessio';
 teatro.platea[3][4] = 'Gianna';
 teatro.palchi[3][1] = 'Luigi';
 
-var plateaPrenotazione = new ordine(teatro.platea, 'platea');
-var palchiPrenotazione = new ordine(teatro.palchi, 'palchi');
+var plateaPrenotazione = new ordinePrenotazione(teatro.platea, 'platea');
+var palchiPrenotazione = new ordinePrenotazione(teatro.palchi, 'palchi');
