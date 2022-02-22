@@ -3,45 +3,63 @@ const palchiEl = document.getElementById('palchi');
 
 const nomeEl = document.getElementById('nome');
 
-const platea = [];
-const palchi = [];
-
-for (var j = 0; j < 9; j++) {
-  platea.push(new Array(8).fill("x"));
+const teatro = { 
+  platea: [],
+  palchi: []
 }
 
-for (var j = 0; j < 6; j++) {
-  palchi.push(new Array(6).fill("x"));
-}
+// ==== PLATEA =====
 
-for (var j = 0; j < platea.length; j++) {
-  for (var i = 0; i < platea[j].length; i++) {
-    var btn = document.createElement('button');
-    btn.innerHTML = 'P' + (j + 1) + (i + 1);
-    btn.addEventListener('click', mostraNomePlatea);
+const nfilePlatea = 7;
+const npostiPlatea = 10;
+
+for (var j = 0; j < nfilePlatea; j++) {
+  teatro.platea.push(new Array(npostiPlatea).fill("x"));
+}
+platea[2][1] = 'Alessio';
+platea[3][4] = 'Gianna';
+
+var prenotazionePlatea = teatro.platea.map( (fila,i) => {
+  p=fila.map( (nome,j) => {
+    btn = document.createElement('button');
     plateaEl.appendChild(btn);
-    platea[j][i] = btn;
-  }
+    btn.value=nome;
+    btn.innerHTML = 'P' +  (j + 1) + (i + 1);
+    btn.addEventListener('click', mostraNomePlatea);
+    return btn;
+  })
   plateaEl.appendChild(document.createElement('br'));
-}
-platea[2][1].value = 'Alessio';
-platea[3][4].value = 'Gianna';
+  return p;
+})
 
 function mostraNomePlatea() {
   nomeEl.innerHTML = this.value;
 }
 
-for (var j = 0; j < palchi.length; j++) {
-  for (var i = 0; i < palchi[j].length; i++) {
-    var btn = document.createElement('button');
-    btn.innerHTML = 'P' + (j + 1) + (i + 1);
-    btn.addEventListener('click', mostraNomePalchi);
-    palchiEl.appendChild(btn);
-    palchi[j][i] = btn;
-  }
-  palchiEl.appendChild(document.createElement('br'));
+plateaEl.appendChild(document.createElement('br'));
+
+// ==== PALCHI ====
+
+const nfilePalchi = 4;
+const npostiPalchi = 6;
+
+for (var j = 0; j < nfilePalchi; j++) {
+  teatro.palchi.push(new Array(npostiPalchi).fill("x"));
 }
-palchi[2][1].value = 'Luigi';
+teatro.palchi[2][1] = 'Luigi';
+
+var prenotazionePalchi = teatro.palchi.map( (fila,i) => {
+  p=fila.map( (nome,j) => {
+    btn = document.createElement('button');
+    plateaEl.appendChild(btn);
+    btn.value=nome;
+    btn.innerHTML = 'P' +  (j + 1) + (i + 1);
+    btn.addEventListener('click', mostraNomePlatea);
+    return btn;
+  })
+  plateaEl.appendChild(document.createElement('br'));
+  return p;
+})
 
 function mostraNomePalchi() {
   nomeEl.innerHTML = this.value;
