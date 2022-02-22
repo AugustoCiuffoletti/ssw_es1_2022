@@ -8,7 +8,7 @@ platea[3][4] = 'Gianna';
 
 class ordine {
   prenotazione = [];
-  constructor(posti, nposti, nfile, elementName) {
+  constructor(posti, elementName) {
     function mostraNome () { 
       nomeEl.innerHTML = this.value;
     };
@@ -33,6 +33,10 @@ class ordine {
   }
 }
 
+const teatro = { 
+  platea: [],
+  palchi: []
+}
 palchi = new ordine(4, 6, 'palchi');
 palchi.posti[2][2].value = 'Luigi';
 platea = new ordine(8, 8, 'platea');
