@@ -10,7 +10,7 @@ class ordine {
         var btn = document.createElement('button');
         element.appendChild(btn);
         btn.value = nome;
-        btn.color = (nome !== "x") ? 'red' : 'green';
+        btn.style.color = (nome !== "x") ? 'red' : 'green';
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
         btn.addEventListener('click', mostraNome);
         return btn;
