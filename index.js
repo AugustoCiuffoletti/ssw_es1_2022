@@ -25,25 +25,24 @@ class ordinePrenotazione {
   }
 }
 
-const nomeEl = document.getElementById('nome');
+const plateaEl = document.getElementById('platea');
+const palchiEl = document.getElementById('palchi');
 
-const teatro = {
-  platea: [],
-  palchi: []
-};
+const nomeEl = document.getElementById('nome');
 
 const nfilePlatea = 7;
 const npostiPlatea = 10;
-teatro.platea=Array(nfilePlatea).fill("").map(() => Array(npostiPlatea).fill("x"));
-
 const nfilePalchi = 4;
 const npostiPalchi = 6;
-teatro.platea=Array(nfilePlatea).fill("").map(() => Array(npostiPlatea).fill("x"));
 
+const teatro = {
+  platea: Array(nfilePlatea).fill("").map(() => Array(npostiPlatea).fill("x")),
+  palchi: Array(nfilePalchi).fill("").map(() => Array(npostiPalchi).fill("x")),
+};
 
 teatro.platea[2][1] = 'Alessio';
 teatro.platea[3][4] = 'Gianna';
-teatro.palchi[3][1] = 'Luigi';
+teatro.palchi[2][1] = 'Luigi';
 
 var plateaPrenotazione = new ordinePrenotazione(teatro.platea, 'platea');
 var palchiPrenotazione = new ordinePrenotazione(teatro.palchi, 'palchi');
