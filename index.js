@@ -3,19 +3,21 @@ const palchiEl = document.getElementById('palchi');
 
 const nomeEl = document.getElementById('nome');
 
-const teatro = {
-  platea: [],
-  palchi: [],
-};
-
-// ==== PLATEA =====
-
 const nfilePlatea = 7;
 const npostiPlatea = 10;
+const nfilePalchi = 4;
+const npostiPalchi = 6;
 
-teatro.platea=Array(nfilePlatea).fill("").map(() => Array(npostiPlatea).fill("x"));
+const teatro = {
+  platea: Array(nfilePlatea).fill("").map(() => Array(npostiPlatea).fill("x")),
+  palchi: Array(nfilePalchi).fill("").map(() => Array(npostiPalchi).fill("x")),
+};
+
 teatro.platea[2][1] = 'Alessio';
 teatro.platea[3][4] = 'Gianna';
+teatro.palchi[2][1] = 'Luigi';
+
+// ==== PLATEA =====
 
 var prenotazionePlatea = teatro.platea.map((fila, i) => {
   p = fila.map((nome, j) => {
@@ -39,11 +41,6 @@ plateaEl.appendChild(document.createElement('br'));
 
 // ==== PALCHI ====
 
-const nfilePalchi = 4;
-const npostiPalchi = 6;
-
-teatro.palchi=Array(nfilePalchi).fill("").map(() => Array(npostiPalchi).fill("x"));
-teatro.palchi[2][1] = 'Luigi';
 
 var prenotazionePalchi = teatro.palchi.map((fila, i) => {
   p = fila.map((nome, j) => {
