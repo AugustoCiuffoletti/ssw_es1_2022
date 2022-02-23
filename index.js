@@ -26,7 +26,11 @@ class ordinePrenotazione {
       nomeEl.innerHTML = this.value 
   };
   toArray() {
-    
+    var a = this.prenotazione.map((fila) =>
+      fila.map( x => x.value)
+    );
+    console.log(JSON.stringify(a));
+    return a;
   }
 }
 
@@ -56,3 +60,5 @@ teatro.palchi[3][1] = 'Luigi';
 
 var plateaPrenotazione = new ordinePrenotazione(teatro.platea, 'platea');
 var palchiPrenotazione = new ordinePrenotazione(teatro.palchi, 'palchi');
+
+function mostra() { console.log(teatro.platea.toArray) }
