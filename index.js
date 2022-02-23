@@ -13,9 +13,8 @@ posto.map( (nome, i) => {
   postiEl.appendChild(btn);
   btn.innerHTML = "P"+ ( i + 1 );
   btn.value=nome;
-  btn.addEventListener('click', mostraNome);
-  return (btn)
-})
+  btn.addEventListener('click', mostraNome)
+});
 
 function mostraNome() {
   nomeEl.innerHTML = this.value;
