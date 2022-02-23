@@ -26,11 +26,9 @@ class ordinePrenotazione {
       nomeEl.innerHTML = this.value 
   };
   toArray() {
-    var a = this.prenotazione.map((fila) =>
+    return this.prenotazione.map((fila) =>
       fila.map( x => x.value)
     );
-    console.log(JSON.stringify(a));
-    return a;
   }
 }
 
