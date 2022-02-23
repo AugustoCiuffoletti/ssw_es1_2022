@@ -34,15 +34,12 @@ const teatro = {
 
 const nfilePlatea = 7;
 const npostiPlatea = 10;
-for (var i = 0; i < nfilePlatea; i++) {
-  teatro.platea.push(new Array(npostiPlatea).fill('x'));
-}
+teatro.platea=Array(nfilePlatea).fill("").map(() => Array(npostiPlatea).fill("x"));
 
 const nfilePalchi = 4;
 const npostiPalchi = 6;
-for (var i = 0; i < nfilePalchi; i++) {
-  teatro.palchi.push(new Array(npostiPalchi).fill('x'));
-}
+teatro.platea=Array(nfilePlatea).fill("").map(() => Array(npostiPlatea).fill("x"));
+
 
 teatro.platea[2][1] = 'Alessio';
 teatro.platea[3][4] = 'Gianna';
