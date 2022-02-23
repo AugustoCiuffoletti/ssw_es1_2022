@@ -13,9 +13,7 @@ const teatro = {
 const nfilePlatea = 7;
 const npostiPlatea = 10;
 
-for (var j = 0; j < nfilePlatea; j++) {
-  teatro.platea.push(new Array(npostiPlatea).fill('x'));
-}
+teatro.platea=Array(nfilePlatea).fill("").map(() => Array(npostiPlatea).fill("x"));
 teatro.platea[2][1] = 'Alessio';
 teatro.platea[3][4] = 'Gianna';
 
@@ -44,9 +42,7 @@ plateaEl.appendChild(document.createElement('br'));
 const nfilePalchi = 4;
 const npostiPalchi = 6;
 
-for (var j = 0; j < nfilePalchi; j++) {
-  teatro.palchi.push(new Array(npostiPalchi).fill('x'));
-}
+teatro.palchi=Array(nfilePalchi).fill("").map(() => Array(npostiPalchi).fill("x"));
 teatro.palchi[2][1] = 'Luigi';
 
 var prenotazionePalchi = teatro.palchi.map((fila, i) => {
