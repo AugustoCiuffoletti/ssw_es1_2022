@@ -25,6 +25,9 @@ class ordinePrenotazione {
     else
       nomeEl.innerHTML = this.value 
   };
+  toArray() {
+    
+  }
 }
 
 const prenotaEl = document.getElementById('prenota');
