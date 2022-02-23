@@ -1,7 +1,6 @@
 class ordinePrenotazione {
   prenotazione = [];
   constructor(posti, elementName) {
-    
     var element = document.getElementById(elementName);
     this.prenotazione = posti.map((fila, i) => {
       var p = fila.map((nome, j) => {
@@ -31,26 +30,19 @@ class ordinePrenotazione {
 const prenotaEl = document.getElementById('prenota');
 const nomeEl = document.getElementById('nome');
 
-const teatro = {
-  platea: [],
-  palchi: []
-};
-
 const nfilePlatea = 7;
 const npostiPlatea = 10;
-for (var i = 0; i < nfilePlatea; i++) {
-  teatro.platea.push(new Array(npostiPlatea).fill('x'));
-}
-
 const nfilePalchi = 4;
 const npostiPalchi = 6;
-for (var i = 0; i < nfilePalchi; i++) {
-  teatro.palchi.push(new Array(npostiPalchi).fill('x'));
-}
+
+const teatro = {
+  platea: Array(nfilePlatea).fill("").map(() => Array(npostiPlatea).fill("x")),
+  palchi: Array(nfilePalchi).fill("").map(() => Array(npostiPalchi).fill("x")),
+};
 
 teatro.platea[2][1] = 'Alessio';
 teatro.platea[3][4] = 'Gianna';
-teatro.palchi[3][1] = 'Luigi';
+teatro.palchi[2][1] = 'Luigi';
 
 var plateaPrenotazione = new ordinePrenotazione(teatro.platea, 'platea');
 var palchiPrenotazione = new ordinePrenotazione(teatro.palchi, 'palchi');
