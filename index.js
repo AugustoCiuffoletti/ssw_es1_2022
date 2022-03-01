@@ -59,8 +59,8 @@ teatro.palchi[3][1] = 'Luigi';
 var plateaPrenotazione = new ordinePrenotazione(teatro.platea, 'platea');
 var palchiPrenotazione = new ordinePrenotazione(teatro.palchi, 'palchi');
 
-document.getElementById('Vedi').addEventListener('click', mostra);
-function mostra() { 
+document.getElementById('Vedi').addEventListener('click', mostraTeatro);
+function mostraTeatro() { 
   console.log(plateaPrenotazione.toArray());
   console.log(palchiPrenotazione.toArray());
  }
