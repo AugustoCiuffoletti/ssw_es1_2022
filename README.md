@@ -1,4 +1,4 @@
-# Esercizio di preparazione al progetto (Passo 3)
+# Esercizio di preparazione al progetto (Passo 4)
 
 Ora i valori nell'array di bottoni vengono caricati da un altro array di stringhe. Abbiamo quindi due array, uno di stringhe (posto), ed uno di bottoni (prenotazione) con la stessa dimensione.
 
