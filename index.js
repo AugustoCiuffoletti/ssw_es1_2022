@@ -9,14 +9,14 @@ class ordinePrenotazione {
         btn.value = nome;
         btn.style.color = (nome !== "x") ? 'red' : 'green';
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
-        btn.addEventListener('click', this.mostraNome);
+        btn.addEventListener('click', this.selezionaPosto);
         return btn;
       });
       element.appendChild(document.createElement('br'));
       return p;
     });
   }
-  mostraNome () { 
+  selezionaPosto () { 
     if ( prenotaEl.value !== "" ) {
       this.value = prenotaEl.value;
       this.style.color = "red";
