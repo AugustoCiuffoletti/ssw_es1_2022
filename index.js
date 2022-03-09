@@ -18,7 +18,6 @@ var prenotazione = platea.map( (fila,i) => {
     return btn;
   })
   plateaEl.appendChild(document.createElement('br'));
-  return p;
 })
 
 function mostraNome() {
