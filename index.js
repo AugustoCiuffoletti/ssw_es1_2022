@@ -12,14 +12,14 @@ class ordinePrenotazione {
         btn.value = nome;
         btn.style.color = (nome !== "x") ? 'red' : 'green';
         btn.innerHTML = 'P' + (j + 1) + (i + 1);
-        btn.addEventListener('click', mostraNome);
+        btn.addEventListener('click', selezionaPosto);
         return btn;
       });
       element.appendChild(document.createElement('br'));
       return p;
     });
 
-    function mostraNome() {
+    function selezionaPosto() {
       nomeEl.innerHTML = this.value;
     }
   }
