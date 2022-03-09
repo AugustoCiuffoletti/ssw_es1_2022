@@ -30,7 +30,6 @@ var prenotazionePlatea = teatro.platea.map((fila, i) => {
     return btn;
   });
   plateaEl.appendChild(document.createElement('br'));
-  return p;
 });
 
 function mostraNomePlatea() {
@@ -45,15 +44,14 @@ plateaEl.appendChild(document.createElement('br'));
 var prenotazionePalchi = teatro.palchi.map((fila, i) => {
   p = fila.map((nome, j) => {
     btn = document.createElement('button');
-    plateaEl.appendChild(btn);
+    palchiEl.appendChild(btn);
     btn.value = nome;
     btn.style.color = nome !== 'x' ? 'red' : 'green'; 
     btn.innerHTML = 'P' + (j + 1) + (i + 1);
-    btn.addEventListener('click', mostraNomePlatea);
+    btn.addEventListener('click', mostraNomePalchi);
     return btn;
   });
-  plateaEl.appendChild(document.createElement('br'));
-  return p;
+  palchiEl.appendChild(document.createElement('br'));
 });
 
 function mostraNomePalchi() {
