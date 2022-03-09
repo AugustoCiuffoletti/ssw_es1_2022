@@ -16,7 +16,7 @@ class ordinePrenotazione {
       return p;
     });
   }
-  selezonaPosto () { 
+  selezionaPosto () { 
     if ( prenotaEl.value !== "" ) {
       this.value = prenotaEl.value;
       this.style.color = "red";
