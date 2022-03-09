@@ -1,9 +1,6 @@
 class ordinePrenotazione {
   prenotazione = [];
   constructor(posti, elementName) {
-    function mostraNome() {
-      nomeEl.innerHTML = this.value;
-    }
     var element = document.getElementById(elementName);
     this.prenotazione = posti.map((fila, i) => {
       var p = fila.map((nome, j) => {
@@ -16,7 +13,6 @@ class ordinePrenotazione {
         return btn;
       });
       element.appendChild(document.createElement('br'));
-      return p;
     });
 
     function selezionaPosto() {
