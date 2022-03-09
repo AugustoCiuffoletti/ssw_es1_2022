@@ -1,4 +1,4 @@
-# Esercizio di preparazione al progetto (Passo 4)
+# Esercizio di preparazione al progetto (Passo 5)
 
 Costruiamo un array di array di stringhe, con le stesse proprietà dette prima. Il questo modo avremo i posti prenotati nella "platea" del nostro teatro. In corrispondenza avremo un array di array di bottoni, creato utilizzando i nomi contenuti nel primo.
 
