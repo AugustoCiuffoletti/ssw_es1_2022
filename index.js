@@ -25,9 +25,6 @@ class ordinePrenotazione {
   }
 }
 
-const plateaEl = document.getElementById('platea');
-const palchiEl = document.getElementById('palchi');
-
 const nomeEl = document.getElementById('nome');
 
 const nfilePlatea = 7;
